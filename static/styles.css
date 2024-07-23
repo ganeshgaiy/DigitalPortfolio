@@ -1,0 +1,292 @@
+:root{
+    --font-size: 12px;
+    --ru: 1.5;
+    --font-body: "EB Garamond", serif;
+    --font-secondary: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --page-margin: calc(2rem*var(--ru));
+    --page-margin-mid: calc(2.5rem*var(--ru));
+    --bg-h: 0;
+    --bg-s: 100%;
+    --bg-l: 98%;
+    --color-bg: hsla(var(--bg-h), var(--bg-s), var(--bg-l), 1);
+    --color-bg-fade: hsla(var(--bg-h), var(--bg-s), var(--bg-l), 0.9);
+    --color-text: #3e3e3e;
+    --color-text-fade: rgba(62, 62, 62, 0.53333);
+    --color-link: #e00202;
+    --screen-mid: 400px;
+}
+
+@media (min-width:var(--screen-mid)) {
+    :root {
+        --page-margin: var(--page-margin-mid);
+        --font-size: 8px
+    }
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    /* -webkit-text-size-adjust: 100% */
+}
+
+body{
+    font-family: "EB Garamond", serif;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+.flex-spacer {
+    flex: 1
+}
+
+/* :root {
+    --font-size: 12px;
+    --ru: 1.5;
+    --font-body: "EB Garamond", serif;
+    --font-secondary: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --page-margin: calc(2rem*var(--ru));
+    --page-margin-mid: calc(3rem*var(--ru));
+    --bg-h: 0;
+    --bg-s: 100%;
+    --bg-l: 98%;
+    --color-bg: hsla(var(--bg-h), var(--bg-s), var(--bg-l), 1);
+    --color-bg-fade: hsla(var(--bg-h), var(--bg-s), var(--bg-l), 0.9);
+    --color-text: #3e3e3e;
+    --color-text-fade: rgba(62, 62, 62, 0.53333);
+    --color-link: #e00202
+} */
+
+.intro_header {
+    order: 1;
+    text-align: center;
+}
+
+.intro_header h1 {
+    font-size: 3.8rem;
+    line-height: 4.5rem;
+    line-height: calc(var(--ru)*3rem);
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 3rem;
+    margin: 0 0 calc(var(--ru)* 2rem);
+}
+
+.intro_header strong {
+    font-weight: 500
+}
+
+.intro .layout-spacer,
+.intro_header h2 {
+    display: none
+}
+
+.intro .intro-header {
+    order: 2
+}
+
+.intro:after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10rem;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent, #fff5f5 100%);
+    background: linear-gradient(180deg, transparent, var(--color-bg) 100%)
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.intro .layout-spacer, .intro_header h2 {
+    display: none;
+}
+
+main {
+    min-height: 100vh
+}
+
+.wrapper {
+    padding: 3rem;
+    padding: var(--page-margin)
+}
+
+.intro-header .intro-header-nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0,
+}
+
+.intro-header .intro-header-nav ul li{
+    margin: 0 1rem;
+    display: inline-block;
+    font-size: 1.5rem;
+
+}
+
+.social-media-links a img{
+    width: 30px;
+    height: 30px;
+    margin: 25px 25px 0px 0px;
+
+}
+
+.social-media-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 430px){
+    .intro-content h2{
+        font-size: 2rem;
+        font-style:italic;
+    }
+
+    .intro_header h1 {
+        font-size: 8rem;
+        line-height: 9rem;
+        line-height: calc(var(--ru)*6rem);
+    }
+
+    .wrapper {
+        --page-margin: var(--page-margin-mid);
+    }
+
+    :root {
+        --page-margin: var(--page-margin-mid);
+        --font-size: var(--font-size-mid)
+    }
+
+}
+
+.intro-content h2{
+    margin-top: 1rem;
+}
+
+.intro-content .intro-para::first-letter{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.intro-content .intro-para{
+    font-size: 1em;
+}
+
+@media screen and (min-width: 768px){
+    .intro-content h2{
+        font-size: 2rem;
+        font-style:italic;
+    }
+
+    .intro_header h2 {
+        opacity: .5;
+        display: block;
+        font-size: 2vw;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 7vw;
+        left: 36.5vw;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .intro_decor {
+        display: block;
+        width: calc(40vw - 6rem);
+        width: calc(40vw - var(--page-margin)*2);
+        height: calc(100% - 30vh);
+        position: absolute;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        right: 3rem;
+        right: var(--page-margin);
+        bottom: calc(3rem - 5%);
+        bottom: calc(var(--page-margin) - 5%);
+        background: url(/images/bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100% 100%
+    }
+
+    .intro_header {
+        order: 1;
+        text-align: left;
+        position: relative;
+    }
+
+    .intro_header h1 {
+        font-size: 8vw;
+        font-weight: 500;
+        margin: 0 0 .25em;
+        line-height: 1em
+    }
+
+    .intro_header h1 br{
+        display: none;
+    }
+
+    .intro__header h2 {
+        opacity: .5;
+        display: block;
+        font-size: 2vw;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 7vw;
+        left: 36.5vw;
+        font-weight: 200;
+        font-style: italic
+    }
+    /* .intro .intro-header {
+        order: 4;
+        position: absolute;
+        bottom: 3rem;
+        bottom: var(--page-margin)
+    } */
+    .intro:after {
+        display: none
+    }
+
+}
