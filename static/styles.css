@@ -348,12 +348,13 @@ main {
 
 .btn {
     display: inline-block;
-    background-color: #28a745;
+    background-color: #1a1a1a;
     color: #fff;
     padding: 10px 20px;
     margin: 16px;
     text-decoration: none;
     border-radius: 4px;
+    border: 2px solid white;
 }
 
 .tags {
@@ -369,3 +370,42 @@ main {
     padding: 5px 10px;
     border-radius: 4px;
 }
+
+.profile-img{
+    text-align: center;
+}
+
+.profile-img img{
+    width: 15%;
+    max-width: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* height: auto; */
+    aspect-ratio: 1 / 1;
+}
+
+
+.contact-info .info-fields .image{
+    width: 2rem;
+    max-width: 100px;
+    min-width: 50px;
+    
+}
+
+.contact-info .info-fields .info{
+    font-size: larger;
+}
+
+.contact-info .info-fields{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maintainence{
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
